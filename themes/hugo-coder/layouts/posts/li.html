@@ -1,0 +1,14 @@
+<li>
+  <span class="date">
+    <i class="fas fa-calendar"></i>
+    <time datetime='{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}'>
+      {{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}
+    </time>
+  </span>
+  <span class="reading-time">
+    <i class="fas fa-clock"></i>
+    {{ i18n "readingTime" .ReadingTime }}
+  </span>
+  <br>
+  <a class="title" href="{{ .Params.ExternalLink | default .URL }}">{{ .Title }}</a>
+</li>
