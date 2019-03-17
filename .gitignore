@@ -1,4 +1,5 @@
 .vscode
+.stignore
 *.pem
 public/
 resources/
