@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+Sitemap: https://adamcrowder.net/sitemap.xml
+Host: adamcrowder.net

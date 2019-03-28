@@ -3,6 +3,7 @@ title = "Adam Crowder"
 theme = "hugo-coder"
 languagecode = "en"
 defaultcontentlangauge = "en"
+enableRobotsTXT = true
 
 pygmentsstyle = "native"
 pygmentscodefences = true
