@@ -5,15 +5,17 @@ slug: "contact"
 
 In order to contact me for any reason, send an email to: [adam@adamcrowder.net](mailto:adam@adamcrowder.net)
 
-I try to stay available, and will usually respond within a day to any questions/inquiries sent my way.
+I try to stay available, and will usually respond within a few days to any questions/inquiries sent my way.
 
 ## PGP Key
 
-For private communication, use my PGP key for my email with ID: `0xC16C6CC0` which is widely available on PGP key servers, and below for convenience and/or verification:
+For private communication, use my PGP key for my email with ID: `0xC16C6CC0` which is widely available on PGP key servers, and below for convenience and/or verification.
+
+If you don't know how to use PGP, you can use [my keybase profile](https://keybase.io/cheeseandcereal) with their [pgp encryption webpage](https://keybase.io/encrypt#cheeseandcereal) to encrypt a message for my PGP key, and then simply send me the encrypted result.
 
 Full Fingerprint: `9FDC 7EE9 9075 9634 8FB8  BE62 CA63 AD7F C16C 6CC0`
 
-[Download Public Key](/adamcrowderpubkey.asc)
+[Download Public Key](/adamcrowderpubkey.asc) or view it in plaintext below:
 
 ---
 
