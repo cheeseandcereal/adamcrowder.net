@@ -1,4 +1,4 @@
-baseURL = "https://adamcrowder.net/"
+baseURL = "https://adamcrowder.net"
 title = "Adam Crowder"
 theme = "hugo-coder"
 languagecode = "en"
@@ -14,7 +14,7 @@ pygmentscodefencesguesssyntax = true
     info = "Backend software engineer. Specializations in blockchains, distributed systems, cloud services, networking, cryptography, and secure protocols."
     description = "Adam Crowder's personal website and blog"
     keywords = "blog,developer,personal,project,programming"
-    avatarurl = "images/avatar.jpg"
+    avatarurl = "images/headshot.jpg"
     favicon_32 = "images/favicon-32.png"
     favicon_16 = "images/favicon-16.png"
 
@@ -27,12 +27,12 @@ pygmentscodefencesguesssyntax = true
 # Social links
 [[params.social]]
     name = "Github"
-    icon = "fab fa-github fa-2x"
+    icon = "fab fa-github"
     weight = 1
     url = "https://github.com/cheeseandcereal/"
 # [[params.social]]
 #     name = "LinkedIn"
-#     icon = "fab fa-linkedin fa-2x"
+#     icon = "fab fa-linkedin"
 #     weight = 2
 #     url = "https://www.linkedin.com/in/"
 
