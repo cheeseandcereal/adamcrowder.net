@@ -95,7 +95,7 @@ There are basically 2 factors at play which require configuring to avoid these 5
 1. The `keepAliveTimeout` of the native NodeJS http.Server returned by Express
 1. The idle timeout setting of the ALB
 
-In order to avoid this problem, the idle timeout of the ALB simply must be higher than the keepAliveTimeout of the Node http.Server. Please note that the value for the Node http.Server `keepAliveTimeout` is in milliseconds, whereas the idle timeout setting of the ALB is in seconds.
+In order to avoid this problem, the idle timeout of the ALB simply must be lower than the keepAliveTimeout of the Node http.Server. Please note that the value for the Node http.Server `keepAliveTimeout` is in milliseconds, whereas the idle timeout setting of the ALB is in seconds.
 
 By default, the idle timeout of an ALB is 60 seconds, which is fairly reasonable for most applications. Assuming we keep this default, here's an example for how to set the keepAliveTimeout of the http server created by Express.
 
