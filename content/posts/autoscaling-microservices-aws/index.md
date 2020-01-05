@@ -4,6 +4,16 @@ date: 2019-03-16T21:30:00-07:00
 tags: ["aws", "microservice", "container", "api", "ecs", "autoscaling"]
 ---
 
+##### Edit: Jan 5, 2020
+
+The following blog post describes using AWS ECS to autoscale a containerized service.
+
+While most of this blog post still applies, AWS has [since released better ECS autoscaling features](https://aws.amazon.com/blogs/containers/deep-dive-on-amazon-ecs-cluster-auto-scaling/) than the purely CPU-utilization cloudwatch trigger mechanism used in this post.
+
+If you want to follow this post, simply consider replacing the cloudwatch-triggers with the AWS native managed scaling services that are now offered for ECS.
+
+---
+
 AWS provides a lot of great services, but it can often be confusing or unclear how to put together various resources in order to create one cohesive system/service.
 
 In this post, I'm going to describe the process of creating an AWS Elastic Container Service (ECS)-based API microservice which will automatically scale under load. This can be really useful for horizontally scalable API services which either already are, or can be easily containerized with Docker.

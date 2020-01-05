@@ -22,7 +22,7 @@ pygmentscodefencesguesssyntax = true
     hidecopyright = true
     rtl = false
 
-    inverted = true
+    colorscheme = "dark"
 
 # Social links
 [[params.social]]
