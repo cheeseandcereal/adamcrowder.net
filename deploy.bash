@@ -5,6 +5,6 @@ cd "$(cd "$(dirname "$0")"; pwd -P)"
 # Build site
 hugo
 # Copy site to host
-rsync -ahz --no-i-r --info=progress2 public/ robit:/home/adam/blog/public/ --delete
+rsync -ahzz --no-i-r --info=progress2 public/ robit:/home/adam/blog/public/ --delete
 # Cleanup
 rm -rf public/ resources/
