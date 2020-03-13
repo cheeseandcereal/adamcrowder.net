@@ -99,6 +99,16 @@ In order to avoid this problem, the idle timeout of the ALB simply must be lower
 
 By default, the idle timeout of an ALB is 60 seconds, which is fairly reasonable for most applications. Assuming we keep this default, here's an example for how to set the keepAliveTimeout of the http server created by Express.
 
+---
+
+**Edit 03/2020:**
+
+As helpfully mentioned in the comments of this post, there is [currently a regression bug](https://github.com/nodejs/node/issues/27363) in the behavior of the `keepAliveTimeout` functionality, that may require _also_ setting the `headersTimeout` of the same NodeJS http.Server object to be above the `keepAliveTimeout`.
+
+This change has been documented in the example below.
+
+---
+
 ```javascript
 const express = require('express');
 const app = express();
@@ -106,6 +116,7 @@ const app = express();
 const server = app.listen(80); // Save the output of 'listen' to a variable, which is a Node http.Server
 
 server.keepAliveTimeout = 65000; // Ensure all inactive connections are terminated by the ALB, by setting this a few seconds higher than the ALB idle timeout
+server.headersTimeout = 66000; // Ensure the headersTimeout is set higher than the keepAliveTimeout due to this nodejs regression bug: https://github.com/nodejs/node/issues/27363
 ```
 
 Once that is set, the http server running on the Node server will no longer be the one prompting connections to close (and doing so ungracefully), and thus the problem is solved!
