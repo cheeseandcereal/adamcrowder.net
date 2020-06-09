@@ -50,7 +50,7 @@ Once you have a stable cluster, it's extremely easy to design/use applications w
 
 The main problem with kubernetes is its massive complexity. It's not necessarily difficult to get a 'hello world' cluster up and running with some containers, but to do it in such a way that's production-ready with best practices, is quite a task. On top of this, even with managed kubernetes services like GKE/EKS/AKS, managing a kubernetes cluster is not a trivial task. Creating and maintaining a cluster isn't a simple 'fire and forget' solution; it often requires constant attention and maintenance. Large kubernetes clusters often require teams of devops to maintain appropriately, which isn't always an option.
 
-## The ECS Solution<a name="the-ecs-solution"></a>
+## The ECS Solution
 
 The solution I'll be presenting is really a middle-ground between the easy and extremely ephemeral API Gateway+Lambda solution, and the highly complex, but flexible kubernetes solution.
 
@@ -68,7 +68,7 @@ This also lets us perform TLS termination at the load balancer, so we don't have
 
 Note that the architecture diagram doesn't show the autoscaling components. Those are provided via CloudWatch Alarms/Triggers and Scaling Policies with Autoscaling Groups. ECS reports its average CPU utilization for the cluster to CloudWatch, which we use to trigger scaling. Also note that while this diagram only shows 2 Availability Zones and 2 EC2s, this could be any combination of AZs (within the same region), as well as any number of EC2s (depending on the scaling).
 
-### Usage Requirements<a name="usage-requirements"></a>
+### Usage Requirements
 
 In order to use this solution, you must first meet these few requirements:
 
@@ -145,7 +145,7 @@ This feature is strongly recommended, and required to be able to ssh into the EC
 
 For this, you simply need to have an EC2 key pair existing in the region corresponding to your vpc, then use the key pair name for the `ec2Key` parameter, and un-comment the KeyName in the AutoScaling LaunchConfiguration (line 240 in the template).
 
-##### Enable public IPv6 support for the API<a name="ipv6-support"></a>
+##### Enable public IPv6 support for the API
 
 In order to enable public IPv6 support for the load balancer, you must first ensure that your public subnets for the template (`pubsubnet1` and `pubsubnet2`) have IPv6 blocks assigned to them, and your VPC support it. This is NOT the default configuration for VPCs, although you can [migrate existing VPCs to support IPv6](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-migrate-ipv6.html#vpc-migrate-ipv6-cidr) if you wish.
 
@@ -165,7 +165,7 @@ A custom domain name for an API is often desired, instead of the default one tha
 
 Find the Hosted Zone ID where the url DNS record will live, and put it in the `route53ZoneId` parameter, then fill the `url` parameter with your desired URL for the api.
 
-Now un-comment the Route 53 record set to add it to the stack (lines 397-405). If you've also [enabled public IPv6 support](#ipv6-support), then you should also un-comment the IPv6 (AAAA) DNS record (lines 407-415).
+Now un-comment the Route 53 record set to add it to the stack (lines 397-405). If you've also [enabled public IPv6 support](#enable-public-ipv6-support-for-the-api), then you should also un-comment the IPv6 (AAAA) DNS record (lines 407-415).
 
 ##### Add more availability zones
 

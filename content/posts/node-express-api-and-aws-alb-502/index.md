@@ -8,7 +8,7 @@ Creating and deploying API servers is a space with a lot of options and many dif
 
 In this post, I'm going to describe my experience with debugging intermittent HTTP 502 responses from [NodeJS Express](https://expressjs.com/) servers fronted by an AWS Application Load Balancer (ALB), and present the solution to solve these intermittent 502 errors.
 
-If you're already familiar with Express and AWS ALB, you can skip to [The 502 Problem](#the-problem)
+If you're already familiar with Express and AWS ALB, you can skip to [The 502 Problem](#the-502-problem)
 
 ## Using Express
 
@@ -32,7 +32,7 @@ AWS provides a variety of load balancers to use for various applications. Their 
 
 They are relatively simple, but don't have a ton of logging options, which can make debugging HTTP 5XX errors a bit difficult.
 
-## The 502 Problem<a name="the-problem"></a>
+## The 502 Problem
 
 While running an Express server using (NodeJS 8+) behind an ALB under moderate load (at least ~15 requests per minute, although more apparent under higher loads), you can start to observe occasional 500-range errors on the ALB.
 
