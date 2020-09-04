@@ -5,13 +5,16 @@ languagecode = "en"
 defaultcontentlangauge = "en"
 enableRobotsTXT = true
 
+paginate = 20
+canonifyurls = true
+
 pygmentsstyle = "native"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
 [params]
     author = "Adam Crowder"
-    info = "Backend software engineer. Specializations in blockchains, distributed systems, cloud services, networking, cryptography, and secure protocols."
+    info = "Back-end software engineer. Specializations in cloud services, blockchains, and networking, with interests in cryptography and secure protocols."
     description = "Adam Crowder's personal website and blog"
     keywords = "blog,developer,personal,project,programming"
     avatarurl = "images/headshot.jpg"
