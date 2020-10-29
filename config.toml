@@ -20,22 +20,32 @@ pygmentscodefencesguesssyntax = true
     avatarurl = "images/headshot.jpg"
     favicon_32 = "images/favicon-32.png"
     favicon_16 = "images/favicon-16.png"
+    footercontent = ""
 
+    dateformat = "January 2, 2006"
+
+    hideFooter = false
     hidecredits = true
     hidecopyright = true
+
     rtl = false
 
     colorscheme = "dark"
+    hidecolorschemetoggle = false
+
+    maxSeeAlsoItems = 5
+
+    enableTwemoji = false
 
 # Social links
 [[params.social]]
     name = "Github"
-    icon = "fab fa-github"
+    icon = "fa fa-github"
     weight = 1
     url = "https://github.com/cheeseandcereal/"
 # [[params.social]]
 #     name = "LinkedIn"
-#     icon = "fab fa-linkedin"
+#     icon = "fa fa-linkedin"
 #     weight = 2
 #     url = "https://www.linkedin.com/in/"
 
