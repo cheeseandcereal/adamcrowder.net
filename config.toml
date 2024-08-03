@@ -18,8 +18,7 @@ pygmentscodefencesguesssyntax = true
     description = "Adam Crowder's personal website and blog"
     keywords = "blog,developer,personal,project,programming"
     avatarurl = "images/headshot.jpg"
-    favicon_32 = "images/favicon-32.png"
-    favicon_16 = "images/favicon-16.png"
+    faviconSVG = "images/favicon.svg"
 
     dateformat = "January 2, 2006"
 
